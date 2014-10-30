@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6960597d-f30c-4505-958f-06019d4d9452" name="PreAuctionLDM" linkedPackageId="1af239a9-b67c-4221-aee5-babe47e8d1b5" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="baf03507-688d-44ca-a2fe-dc741959b13d">
+      <profileInstance Id="5613d237-cb5e-47b6-8a08-79ff23443f01" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7205faa1-997f-41f1-82f6-f624f6ff0544">
+      <profileInstance Id="cc3b59d5-f808-408e-9406-309066fbbd34" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="136e36f0-f2db-4d52-a4b8-d7858f4f89e4" name="Account" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <description>An account belonging to a subscriber</description>
+        <elementDefinition Id="956b8590-d627-42cf-8baf-f061401499c1" />
+        <targetEnds>
+          <association Id="c40f0f07-912f-47e4-899d-7ab2c59fab9c" isDerived="false" sourceEndRoleName="Account" targetEndRoleName="Subscriber" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9745c626-6fac-40e0-98d7-8f6be4f41348" LastKnownName="Subscriber" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95606fd2-eac1-422d-84da-55ad081fde8d" name="Account" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bdb4b0bd-7468-4672-a975-05d172f4c2a5" name="Lower" value="1">
+                      <elementDefinition Id="9d7c9152-f1c1-4701-acc1-a3fc968ddbfd" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5f591888-ff87-4a6a-b8a6-e1fa8153a1e1" name="Upper" value="*">
+                      <elementDefinition Id="11108022-fe37-439f-a43e-e1107f896b27" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="012ce838-8c9f-4066-ae95-25e4fa8af31b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97ff3289-7cc8-46bc-80cf-85a45526c00a" name="Subscriber" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4043f574-6472-4c43-a174-db808642749b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4acf4332-b32d-42ba-92ff-2ebc31b20ebf" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="28074970-84f3-442a-8dfb-d8d55e30b0a1" name="AccountID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5d0e2512-8ef8-4477-aac2-8021af42318f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bc865058-9d54-4b93-ac43-304b5b48321f" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="807ddffc-52db-4427-b09f-914815d75603" name="SubscriberID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3d093e9-9f59-41b3-b529-587d9875b02b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="45a5a50b-c9ff-4dd8-991f-de60c0f30a5c" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9745c626-6fac-40e0-98d7-8f6be4f41348" name="Subscriber" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <description>An entity that licenses a product</description>
+        <elementDefinition Id="42cd4cae-9fa8-4a1b-a86b-f412b5601928" />
+        <ownedAttributesInternal>
+          <property Id="17d2cbdf-2769-4f6e-b0f2-5e2cd17192c8" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1fbae7ff-e8f4-46e5-8e3f-598e574482f2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="650edb7d-d1cd-45e0-8c74-44e6e608c905" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="4a1501e4-e319-4a73-a88f-ec85f9cc3b8d" name="SubscriberID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c5257cc-08dd-4acc-8aff-4deba948827b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="45a5a50b-c9ff-4dd8-991f-de60c0f30a5c" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="bc865058-9d54-4b93-ac43-304b5b48321f" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="650edb7d-d1cd-45e0-8c74-44e6e608c905" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4cc9a2ee-2adf-49e9-82dc-064494e0022a" name="Auction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9fa0be99-aef2-4f6c-ac30-653c335f7ea5" />
+        <ownedAttributesInternal>
+          <property Id="e7ccbd72-09da-4a1b-b11d-6c69c1bb6bb2" name="AuctionID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0880b40b-b825-40e8-9019-ea621faa5ccd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="45a5a50b-c9ff-4dd8-991f-de60c0f30a5c" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="f0120748-36f1-49bc-b0c9-b407ec60d1d9" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5a654fdd-2720-4d08-aa74-257dbf9f27d4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="91ac936d-7aa6-4cb6-814c-576fd7b2dba8" LastKnownName="DateTime" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="45a5a50b-c9ff-4dd8-991f-de60c0f30a5c" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="91ac936d-7aa6-4cb6-814c-576fd7b2dba8" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DateTime">
+        <elementDefinition Id="2d8b14b7-85b2-429e-8ad2-573378279ad9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="1af239a9-b67c-4221-aee5-babe47e8d1b5" name="Planning">
+    <elementDefinition Id="f9c21649-fd71-486c-aa31-ec65a982e55d" />
+  </package>
+</logicalClassDesignerModel>
